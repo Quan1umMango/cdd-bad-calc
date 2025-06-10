@@ -1,0 +1,89 @@
+body {
+	background-color:#F2E2B1;
+}
+
+.main {
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	margin:10px;
+	padding:20px;
+}
+
+
+#output {
+	width:50%;
+	height:80px;
+	background-color:#26222e;
+	border-radius:3px;
+	border-color:#131217;
+	border-style:solid;
+	border-width:8px;
+	display :flex;
+}
+
+.token {
+	flex:1;
+	padding:10px;	
+	margin:5px;
+	background-color:#0b0a0d;
+	border-radius:5px;
+	text-align:center;
+	color:white;
+	font-size:5vh;
+}
+
+
+#input {
+	background-color:#FF6961;
+	width:100px;
+	height:100px;
+	margin 10px;
+	border-radius:50%;
+	border:none;
+	color:white;
+	cursor:pointer;
+	font-size:3vh;
+	transition:background-color 0.3s ease;
+}
+
+#input:hover {
+	background-color:#de2f26;
+	font-size:5vh;
+}
+
+.selected {
+	background-color:RED;
+}
+
+#add-more {
+	cursor:pointer;
+	color:blue;
+}
+
+#add-more:hover {
+	color:purple;
+}
+
+#popup {
+	
+	display:none;	
+	position:fixed;
+	z-index:1;
+	width:50%;
+	height:50%;
+	left:25%;
+	top:0;
+	background-color:white;
+	color:black;
+	
+}
+
+
+.pixelify-sans-token {
+	font-family:"Pixelify Sans", sans-serif;
+	font-optical-sizing:auto;
+	font-weight: 400;
+	font-style:normal;
+}

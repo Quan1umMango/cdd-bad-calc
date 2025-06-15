@@ -21,9 +21,10 @@ for(let i = 0; i< nOutputs;i++) {
 
 
 function updateOutput(newVals,len) {
+        var l = len;
 	if(nOutputs-1 < len) {
-		console.error("ERROR: len > nOutputs-1");
-		return;
+                l = nOutputs-1;
+                console.warn("ERROR: len > nOutputs-1");
 	}
 	
 	var cs =Array.from(output.children);
@@ -33,7 +34,7 @@ function updateOutput(newVals,len) {
 		c.textContent = '';
 
 	}
-	for(let i =len;i>-1;i--) {
+	for(let i =l;i>-1;i--) {
 		var c = cs[cs.length-1-i];
 		c.textContent = newVals[len-1-i];
 	}
@@ -96,6 +97,7 @@ inpBtn.onclick = function() {
 	if(timeout) { clearTimeout(timeout); }
 	timeout = setTimeout(function() { 
 		inpBtn.textContent = "c";
+                if(curIndex==nOutputs && Options[curOpt] !='<' && Options[curOpt] !='=') { return; }
 		if(curOpt == optLen-1) {
 			let s = operations.join('');
 			try {
